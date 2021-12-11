@@ -157,6 +157,12 @@ const menus: {
             icon: 'user',
             component:'MyTables'
         },
+        {
+            key: '/app/ticket',
+            title: 'Ticket Purchase',
+            icon: 'wallet',
+            component:'TicketTable'
+        },
     ],
     others: [], // 非菜单相关路由
 };

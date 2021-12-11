@@ -8,6 +8,7 @@ import BasicForm from './forms/BasicForm';
 import BasicTable from './tables/BasicTables';
 import AdvancedTable from './tables/AdvancedTables';
 import MyTables from './tables/MyTable';
+import TicketTable from './tables/TicketTable';
 import AsynchronousTable from './tables/AsynchronousTable';
 import Echarts from './charts/Echarts';
 import Recharts from './charts/Recharts';
@@ -44,6 +45,7 @@ export default {
     BasicTable,
     AdvancedTable,
     MyTables,
+    TicketTable,
     AsynchronousTable,
     Echarts,
     Recharts,
