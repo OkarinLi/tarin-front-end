@@ -87,7 +87,6 @@ class TicketTable extends React.Component {
   };
 
   showModal = (key: any) => {
-    debugger
     let user = umbrella.getLocalStorage("user");
     let contact = user.contact
     contact.map((item:any)=>item.key = item.id)
