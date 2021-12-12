@@ -1,6 +1,4 @@
-/**
- * Created by hao.cheng on 2017/4/16.
- */
+
 import axios from "axios";
 import { get, post, put, deleteRequest } from "./tools";
 import * as config from "./config";
@@ -103,7 +101,8 @@ export const getStationList = () => get({ url: config.LOCAL_API + "/station" });
 
 export const getTrainTicket = (
   departureStation: String,
-  arrivalStation: String
+  arrivalStation: String,
+  time:any
 ) =>
   get({
     url:
@@ -111,5 +110,23 @@ export const getTrainTicket = (
       "/trainTicket?departureStation=" +
       departureStation +
       "&arrivalStation=" +
-      arrivalStation,
+      arrivalStation +
+      "&train_date=" +
+      time
   });
+
+  export const addTicket=(data:any)=>{
+    return (post({
+      url: config.LOCAL_API + '/ticket',
+      data
+    }))
+    
+  }
+
+  export const getTicketById=(id:Number)=>{
+    return (
+      get({
+        url:config.LOCAL_API + '/ticket?user_id='+id
+      })
+    )
+  }

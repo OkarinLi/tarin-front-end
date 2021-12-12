@@ -1,7 +1,3 @@
-/**
- * Created by 叶子 on 2017/7/30.
- * 接口地址配置文件
- */
 
 //easy-mock模拟数据接口地址
 const MOCK_API = 'https://react-admin-mock.now.sh/api';

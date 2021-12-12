@@ -1,11 +1,4 @@
-/*
- * File: RouteWrapper.tsx
- * Desc: 描述
- * File Created: 2020-05-19 11:32:58
- * Author: chenghao at <hao.cheng@karakal.com.cn>
- * ------
- * Copyright 2020 - present, karakal
- */
+
 import React, { useMemo } from 'react';
 import DocumentTitle from 'react-document-title';
 import queryString from 'query-string';

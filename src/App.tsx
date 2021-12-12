@@ -105,7 +105,7 @@ const App = (props: AppProps) => {
 
         handleResize((isMobile: boolean) => setAlita('responsive', { isMobile }));
         openFNotification();
-        fetchSmenu((smenus: any[]) => setAlita('smenus', smenus));
+        // fetchSmenu((smenus: any[]) => setAlita('smenus', smenus));
     }, [setAlita]);
 
     function toggle() {

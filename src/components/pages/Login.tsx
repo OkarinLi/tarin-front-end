@@ -1,6 +1,4 @@
-/**
- * Created by hao.cheng on 2017/4/16.
- */
+
 import React from 'react';
 import { Form, Icon, Input, Button, Checkbox,message} from 'antd';
 import { PwaInstaller } from '../widget';
@@ -43,7 +41,7 @@ class Login extends React.Component<LoginProps> {
                     if(response.resultCode===200){
                         umbrella.setLocalStorage('user', response.data);
                         // setAlitaState({ funcName: 'admin', stateName: 'auth' });
-                        history.push('/app/dashboard/index');
+                        history.push('/app/account');
                     }else{
                         message.error("Login fail, please try again")
                     }
@@ -77,7 +75,7 @@ class Login extends React.Component<LoginProps> {
                             })(
                                 <Input
                                     prefix={<Icon type="user" style={{ fontSize: 13 }} />}
-                                    placeholder="管理员输入admin, 游客输入guest"
+                                    placeholder="Username"
                                 />
                             )}
                         </FormItem>
@@ -88,7 +86,7 @@ class Login extends React.Component<LoginProps> {
                                 <Input
                                     prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
                                     type="password"
-                                    placeholder="管理员输入admin, 游客输入guest"
+                                    placeholder="Password"
                                 />
                             )}
                         </FormItem>
@@ -100,7 +98,7 @@ class Login extends React.Component<LoginProps> {
                             <span className="login-form-forgot" style={{ float: 'right',cursor:'pointer' }}
                             onClick={()=>{this.props.history.push('/register');}}
                             >
-                                Register
+                                Register Now
                             </span>
                             <Button
                                 type="primary"
@@ -108,7 +106,7 @@ class Login extends React.Component<LoginProps> {
                                 className="login-form-button"
                                 style={{ width: '100%' }}
                             >
-                                登录
+                                Login
                             </Button>
                             {/* <p style={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <span>或 现在就去注册!</span>

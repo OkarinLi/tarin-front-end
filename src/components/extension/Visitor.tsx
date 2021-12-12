@@ -1,11 +1,4 @@
-/*
- * File: Visitor.tsx
- * Desc: 访客
- * File Created: 2019-10-25 22:31:37
- * Author: chenghao
- * ------
- * Copyright 2019 - present, chenghao
- */
+
 import React from 'react';
 import BreadcrumbCustom from '../BreadcrumbCustom';
 import { Row, Col, Card } from 'antd';

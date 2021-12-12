@@ -1,11 +1,4 @@
-/*
- * File: MultipleMenu.tsx
- * Desc: 多级菜单组件
- * File Created: 2019-12-18 23:15:35
- * Author: chenghao
- * ------
- * Copyright 2019 - present, karakal
- */
+
 import React from 'react';
 import BreadcrumbCustom from '../BreadcrumbCustom';
 import { Row, Col, Card } from 'antd';

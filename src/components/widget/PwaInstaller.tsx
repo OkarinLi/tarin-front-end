@@ -1,11 +1,4 @@
-/*
- * File: PwaInstaller.js
- * Desc: pwa手动触发安装
- * File Created: 2018-11-07 21:13:18
- * Author: chenghao
- *
- * Copyright 2018 - present, chenghao
- */
+
 import React, { Component } from 'react';
 
 class PwaInstaller extends Component {
