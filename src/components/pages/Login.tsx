@@ -46,7 +46,7 @@ class Login extends React.Component<LoginProps> {
                         message.error("Login fail, please try again")
                     }
                     // history.push('/app/dashboard/index');
-                })
+                }).catch(err=>console.log(err))
                 
             //     if (values.userName === 'admin' && values.password === 'admin')
                     

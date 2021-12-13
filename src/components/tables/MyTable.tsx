@@ -15,7 +15,8 @@ import {
   getUserInfo,
   updateUserInfo,
   deleteContact,
-  getTicketById
+  getTicketById,
+  refundTicket
 } from "../../service/index";
 import umbrella from "umbrella-storage";
 import ModalForm from "../forms/ModalForm";
@@ -122,6 +123,17 @@ class MyTables extends React.Component<MyTablesProps, MyTablesState> {
         dataIndex: "travel_time",
         key: "travel_time",
       },
+      {
+        title: "operation",
+        dataIndex: "operation",
+        render: (text: any, record: any) => {
+          return (
+            <Button type="primary" onClick={() => this.refundTicket(record)}>
+              Refund
+            </Button>
+          );
+        },
+      },
     ];
     this.columns = [
       {
@@ -187,6 +199,18 @@ class MyTables extends React.Component<MyTablesProps, MyTablesState> {
     this.getUser();
     this.getTicketData()
   }
+
+  refundTicket=(record:any)=>{
+    record.travel_time = record.travel_time.substr(0,10)
+    delete(record.sequence)
+    delete(record.key)
+    // debugger
+    refundTicket(record).then(res=>{
+      this.getTicketData()
+    }).catch(e=>{
+      console.log(e)
+    })
+  }
   getTicketData=()=>{
     let user = umbrella.getLocalStorage("user")
     getTicketById(user.id).then(res=>{
@@ -197,6 +221,8 @@ class MyTables extends React.Component<MyTablesProps, MyTablesState> {
         this.setState({TicketData:res.data})
     })
   }
+
+  
   getUser = () => {
     let user = umbrella.getLocalStorage("user");
     getUserInfo(user.id)
@@ -320,7 +346,7 @@ class MyTables extends React.Component<MyTablesProps, MyTablesState> {
     });
     return (
       <div className="gutter-example">
-        <BreadcrumbCustom first="My Account" />
+        <BreadcrumbCustom first="Personal Center" />
         <Row gutter={16}>
           <Col className="gutter-row" md={24}>
             <div className="gutter-box">

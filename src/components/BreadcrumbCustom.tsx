@@ -14,9 +14,9 @@ class BreadcrumbCustom extends React.Component<BreadcrumbCustomProps> {
         return (
             <span>
                 <Breadcrumb style={{ margin: '12px 0' }}>
-                    <Breadcrumb.Item>
+                    {/* <Breadcrumb.Item>
                         <Link to={'/app/dashboard/index'}>Main Page</Link>
-                    </Breadcrumb.Item>
+                    </Breadcrumb.Item> */}
                     {first}
                     {second}
                 </Breadcrumb>

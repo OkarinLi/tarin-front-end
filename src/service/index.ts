@@ -130,3 +130,11 @@ export const getTrainTicket = (
       })
     )
   }
+
+  export const refundTicket = (data:any)=>{
+      return deleteRequest({
+        url: config.LOCAL_API + "/ticket",
+        data,
+      });
+
+  }
